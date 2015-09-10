@@ -1,1 +1,1 @@
-# HomeworkSUbmissionApp
+# HomeworkSubmissionApp
