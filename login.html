@@ -24,17 +24,17 @@
 	
   <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-   </head>
 
+   </head>
   <body>
      <div class="container">
 
       <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">ID:</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="text" id="id" class="form-control" placeholder="Enter ID" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="pwd" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
@@ -46,7 +46,7 @@
       </form>
       <!--signup Modal-->
       <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div ng-app="myapp" ng-controller="AppCtrl" class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -60,12 +60,12 @@
           <div class="form-group">
               <div class="radio">
                <label>
-                  <input type="radio" name="optionsRadios" id="student" value="student" checked>Student
+                  <input ng-model="name" ng-click="toggleSubject()" type="radio" name="SID" id="student" value="student" checked>Student
                </label>
             </div>
             <div class="radio">
                <label>
-                  <input type="radio" name="optionsRadios" id="teacher" value="teacher">Teacher
+                  <input ng-model="name" ng-click="toggleSubject()" type="radio" name="TID" id="teacher" value="teacher">Teacher
                </label>
             </div>
            </div>
@@ -84,10 +84,10 @@
               </div>
            </div>
            <div class="form-group">
-              <label for="lastname" class="col-sm-2 control-label">ID</label>
+              <label id="identifier" for="id" class="col-sm-2 control-label">{{name}}</label>
               <div class="col-sm-10">
-                 <input type="text" class="form-control" id="id" 
-                    placeholder="Enter ID">
+                 <input type="text" class="form-control" id="id"
+                 placeholder="Enter ID">
               </div>
            </div>
            <div class="form-group">
@@ -97,9 +97,10 @@
                     placeholder="Enter Address">
               </div>
            </div>
-           <div class="form-group">
-              <label for="name">Select subject</label>
-              <select class="form-control">
+           <div ng-show="subject" class="form-group"></div>
+           <div ng-hide="subject" class="form-group">
+              <label for="name" class="col-sm-2">Select subject</label>
+              <select class="form-control col-sm-10" >
                 <option>Select a subject</option>
                  <option>Art</option>
                  <option>Biology</option>
@@ -136,9 +137,13 @@
 
       <!--end signup Modal-->
     </div> <!-- /container -->
-  <footer class="footer">
-          <p>&copy; Carolyn Hung 2015</p>    
+  <footer>
+      <div class="footer container text-center">
+          <p class="text-muted">&copy; Carolyn Hung 2015</p>    
+      </div>
    </footer>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+    <!-- Custom AngularJS for this template -->
+    <script src="js/app.js" type="text/javascript"></script>
 </html>
