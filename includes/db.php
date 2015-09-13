@@ -1,12 +1,12 @@
 <?php
 
-
 $host = "localhost";
+$database = "hwsubmission";
 $username = "root";
 $password = "jph2020429";
 
 //create connection
-$conn = new mysqli($host, $username, $password);
+$conn = new mysqli($host, $username, $password, $database);
 
 //check connection
 if ($conn->conntct_error){
