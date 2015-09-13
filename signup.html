@@ -1,51 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-
-    <title>Homework Submission App</title>
-
-   <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-	<!-- Custom styles for this template -->
-    <link href="css/signin.css" rel="stylesheet">
-
-	<!-- Latest compiled and minified JavaScript -->
-	
-  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-   </head>
-
-  <body>
-     <div class="container">
-
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">ID:</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <hr style="border:solid #9ab0aa 1px; display: block; width: 100%"/>
-        <a data-toggle="modal" data-target="#myModal">Create an account</a>
-      </form>
-      <!--signup Modal-->
-      <!-- Modal -->
+<!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -100,7 +53,6 @@
            <div class="form-group">
               <label for="name">Select subject</label>
               <select class="form-control">
-                <option>Select a subject</option>
                  <option>Art</option>
                  <option>Biology</option>
                  <option>Computer Science</option>
@@ -121,24 +73,17 @@
                  </div>
               </div>
            </div>
-          
+           <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                 <button type="submit" class="btn btn-default">Create</button>
+              </div>
+           </div>
         </form>
         </div>
         <div class="modal-footer">
-          <div class="col-sm-offset-2 col-sm-10">
-             <button type="submit" class="btn btn-primary">Create</button>
-          </div>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
     </div>
   </div>
-
-      <!--end signup Modal-->
-    </div> <!-- /container -->
-  <footer class="footer">
-          <p>&copy; Carolyn Hung 2015</p>    
-   </footer>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
-</html>
