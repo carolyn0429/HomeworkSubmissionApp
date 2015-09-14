@@ -1,27 +1,32 @@
-angular.module('myapp', ['ngRoute'])
+angular.module('myapp', ['ngRoute', 'ngResource'])
     .controller('AppCtrl',['$scope', function($scope){
         $scope.subject = true;
         $scope.toggleSubject = function() {
             $scope.subject = $scope.subject === false ? true: false;
         };
 	}])
-	.controller('HistoryCtrl',function($scope){
-		$scope.message='This is history page';
-	})
+	.controller('HistoryCtrl',['$scope', '$http', function ($scope, $http) {
+        $http.get('data.php')
+        .success(function(data) {
+            $scope.submissions = data;
+        });
+    }])
 
 	.config(['$routeProvider', function($routeProvider){
 		$routeProvider.
+		when('/',{
+			templateUrl: 'views/homeworks.html'
+		}).
 		when('/history',{
-			templateUrl: '#/history.html',
+			templateUrl: 'views/history.html',
 			controller: 'HistoryCtrl'
 		}).
 		when('/contact',{
-			templateUrl: '#/contact.html',
-			controller: 'ContactCtrl'
+			templateUrl: 'views/contact.html',
+			//controller: 'ContactCtrl'
 		}).
 		otherwise({
-			redirectTo: '/teacherHome.html'
+			redirectTo: '/'
 		});
-	}]);
-
+}]);
 
