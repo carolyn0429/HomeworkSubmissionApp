@@ -1,7 +1,7 @@
 <div class="jumbotron">
       <h2>Homework</h2>
       <br/>
-      <button data-toggle="modal" data-target="#myModal" type="button" name="add_hw" class="btn btn-default" aria-label="Left Align">
+      <button action="insertHW.php" method="post" data-toggle="modal" data-target="#myModal" type="button" name="add_hw" class="btn btn-default" aria-label="Left Align">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"> Add new homework</span>
     </button>
      
@@ -99,11 +99,11 @@
             </div>
          </div>
          <div class="form-group">
-            <label for="hwqestion" class="col-sm-2 control-label">Assigned to:</label>
+            <label for="hwassigned" class="col-sm-2 control-label">Assigned to:</label>
             <div class="col-sm-8">
                <div class="button-group">
                   <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog">Student ID</span> <span class="caret"></span></button>
-                <ul class="dropdown-menu">
+                <ul for="hwassigned" class="dropdown-menu">
                   <li><a href="#" class="small" data-value="all" tabIndex="-1"><input type="checkbox"/>&nbsp;All</a></li>
                   <li><a href="#" class="small" data-value="lv123q" tabIndex="-1"><input type="checkbox"/>&nbsp;lv123q</a></li>
                   <li><a href="#" class="small" data-value="ck456g" tabIndex="-1"><input type="checkbox"/>&nbsp;ck456g</a></li>

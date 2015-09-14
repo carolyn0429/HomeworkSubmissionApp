@@ -4,9 +4,6 @@
 #include the db connection file
 include('includes/db.php');
 
-mysql_connect($host , $username, $password) or
-    die("Could not connect: " . mysql_error());
-	mysql_select_db($database);
 
 	//echo "Connected successfully";   
 $result = mysql_query("SELECT * FROM student_homework");
