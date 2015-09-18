@@ -1,0 +1,97 @@
+<div class="jumbotron">
+      <h2>My Homework</h2>
+       <!--<div class="test" ng-app="stuapp" ng-controller="HomeworkCtrl" ng-repeat="hw in homeworks track by $index">
+          {{hw}}
+
+        </div>-->
+     <br/> <br/>
+     <div class="table-responsive">          
+      <table class="table table-striped">
+        <thead>
+         
+          <tr>
+            <th>#</th>
+            <th>Name</th>         
+            <th>Deadline</th>
+            <th>Submission Status</th>
+            <th>History</th>    
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-app="stuapp" ng-controller="HomeworkCtrl" ng-repeat="hw in homeworks track by $index"> 
+            <td value="{{hw.hw_id}}">
+              {{hw.hw_id}}
+            </td>
+            <td><a data-toggle="modal" data-target="#detailModal"> {{hw.hw_name}}</a></td>
+            <td> {{hw.hw_due}}</td>
+            <!--<td><button id="submit_hw" type="button" data-ng-disabled="checkSubmission()"class="btn btn-success pull-right" data-toggle="modal" data-target="#historyModal">History</button></td>-->
+            <td> <a href="#/answer"><button id="submit_hw" type="button" data-ng-disabled="checkSubmission()"class="btn btn-success pull-right">History</button></a></td>
+          </tr>       
+        </tbody>
+      </table>
+    </div><!--table-->
+</div><!--jumbotron-->
+
+<!--modal for hw details pop up-->
+  <div class="modal fade" id="detailModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">HW1</h4>
+        </div>
+        <div class="modal-body">
+          <p>what is tasseract?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+<!--end of hw modal -->
+
+
+<!--modal for hw history pop up-->
+  <!--<div class="modal fade" id="historyModal" role="dialog">
+    <div class="modal-dialog">
+    
+     
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Review Submission History</h4>
+        </div>
+        <div class="modal-body">
+          <h5>1. Homework Information</h5>
+          <label>Name:</label> HW1<br/> 
+          <label>Description:</label> What is tasseract<br/> 
+          <label>Due Date/Time:</label> 2015-09-30 23:59:59<br/> 
+          <label>Student SID:</label> ch451r<br/> 
+          <hr/>
+           <h5>2. Submission History</h5>
+          
+         
+          <hr/>
+           <h5>3. Finish</h5>
+           <p>Click OK to go back.<br/> 
+              Click Start New Submission to start new submission.
+           </p>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+          
+          <button action="insertAnswer.php" type="button" class="btn btn-success" data-dismiss="modal">Start New Submission</button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>-->
+  
+<!--end of hw history modal -->

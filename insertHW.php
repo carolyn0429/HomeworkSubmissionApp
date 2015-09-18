@@ -1,5 +1,6 @@
 <?php 
 
+session_start();
 #include db onnection config file
 include('includes/db.php');
 

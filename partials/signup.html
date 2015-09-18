@@ -1,0 +1,89 @@
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create a new account</h4>
+        </div>
+        <div class="modal-body">
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+              <div class="radio">
+               <label>
+                  <input type="radio" name="optionsRadios" id="student" value="student" checked>Student
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                  <input type="radio" name="optionsRadios" id="teacher" value="teacher">Teacher
+               </label>
+            </div>
+           </div>
+           <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">First Name</label>
+              <div class="col-sm-10">
+                 <input type="text" class="form-control" id="firstname" 
+                    placeholder="Enter First Name">
+              </div>
+           </div>
+           <div class="form-group">
+              <label for="lastname" class="col-sm-2 control-label">Last Name</label>
+              <div class="col-sm-10">
+                 <input type="text" class="form-control" id="lastname" 
+                    placeholder="Enter Last Name">
+              </div>
+           </div>
+           <div class="form-group">
+              <label for="lastname" class="col-sm-2 control-label">ID</label>
+              <div class="col-sm-10">
+                 <input type="text" class="form-control" id="id" 
+                    placeholder="Enter ID">
+              </div>
+           </div>
+           <div class="form-group">
+              <label for="lastname" class="col-sm-2 control-label">Address</label>
+              <div class="col-sm-10">
+                 <input type="text" class="form-control" id="address" 
+                    placeholder="Enter Address">
+              </div>
+           </div>
+           <div class="form-group">
+              <label for="name">Select subject</label>
+              <select class="form-control">
+                 <option>Art</option>
+                 <option>Biology</option>
+                 <option>Computer Science</option>
+                 <option>Chemistry</option>
+                 <option>Geography</option>
+                 <option>History</option>
+                 <option>Law</option>
+                 <option>Music</option>
+                 <option>Physics</option>
+              </select>
+          </div>
+           <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                 <div class="checkbox">
+                    <label>
+                       <input type="checkbox"> Remember me
+                    </label>
+                 </div>
+              </div>
+           </div>
+           <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                 <button type="submit" class="btn btn-default">Create</button>
+              </div>
+           </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>

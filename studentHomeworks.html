@@ -1,0 +1,102 @@
+<div class="jumbotron">
+      <h2>My Homework</h2>
+     <br/> <br/>
+     <div class="table-responsive">          
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Deadline</th>
+            <th>Submission Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a data-toggle="modal" data-target="#detailModal">HW1</a></td>
+            <td>String</td>
+            <td>11:59pm PST 9/29/2015</td>
+            <td> 12:00pm PST 9/1/2015<button id="submit_hw" type="button" class="btn btn-success pull-right">History</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a data-toggle="modal" data-target="#detailModal">HW2</a></td>
+            <td>Array</td>
+            <td>11:59pm PST 10/29/2015</td>
+            <td>12:00pm PST 10/2/2015<button id="submit_hw" type="button" class="btn btn-success pull-right">History</button></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a data-toggle="modal" data-target="#detailModal">HW3</a></td>
+            <td>Functions</td>
+            <td>11:59pm PST 11/29/2015</td>
+            <td>Not yet submitted<button id="submit_hw" type="button" class="btn btn-success pull-right">History</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!--table-->
+</div><!--jumbotron-->
+
+<!--modal for hw details pop up-->
+  <div class="modal fade" id="detailModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">HW1</h4>
+        </div>
+        <div class="modal-body">
+          <p>Questions: What is Tesseract?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+<!--end of hw modal -->
+
+
+<!--modal for hw history pop up-->
+  <div class="modal fade" id="historyModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Review Submission History</h4>
+        </div>
+        <div class="modal-body">
+          <h5>1. Homework Information</h5>
+          <label>Name:</label> HW1
+          <label>Description:</label> description
+          <label>Due Date/Time:</label> deadline
+          <label>Student SID:</label> ch451r
+          <hr/>
+           <h5>2. Submission History</h5>
+          
+         
+          <hr/>
+           <h5>3. Finish</h5>
+           <p>Click OK to go back.<br/> 
+              Click Start New Submission to start new submission.
+           </p>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal">Start New Submission</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+<!--end of hw history modal -->

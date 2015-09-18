@@ -1,0 +1,66 @@
+ <div class="jumbotron">
+  <h2>Review Submission History</h2>
+      <br/> <br/>
+    <!-- filter search function
+    <div class="input-group col-lg-4">
+        <input type="text" class="form-control" placeholder="Search..." id="search" name="search" ng-model="search">
+          <div class="input-group-btn">
+            <button type="submit" class="btn btn-success">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+    </div>  -->   
+  <!--testing
+     <div class="test" ng-app="stuapp" ng-controller="AnswerCtrl" ng-repeat="a in answers track by $index">
+      {{a}}
+
+    </div>-->
+    
+    <div class="table-responsive">      
+      <table class="table table-striped">   
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Submitter</th>
+            <th>Homework</th>
+            <th>Answer</th>
+            <th>Last Submitted</th>              
+          </tr>
+        </thead>
+        <tbody>
+          <!--<h5>1. Homework Information</h5>
+          <label>Name:</label> HW1<br/> 
+          <label>Description:</label> What is tasseract<br/> 
+          <label>Due Date/Time:</label> 2015-09-30 23:59:59<br/> 
+          <label>Student SID:</label> ch451r<br/> 
+          <hr/>
+           <h5>2. Submission History</h5>
+          
+         
+          <hr/>
+           <h5>3. Finish</h5>
+           <p>Click OK to go back.<br/> 
+              Click Start New Submission to start new submission.
+           </p>-->
+       
+          <tr ng-app="stuapp" ng-controller="AnswerCtrl" ng-repeat="a in answers track by $index">
+
+            <td>{{ a.ans_id}} </td>
+            <td>{{ a.stu_id }} </td>
+            <td>{{ a.hw_id }} </td>
+            <td>{{ a.answer }} </td>
+            <td>{{ a.last_submit }} </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div><!--table-->
+    <div class="buttons">
+
+          <a href="#/student"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></a>
+          
+          <a href="#/submit"><button action="insertAnswer.php" type="button" class="btn btn-success" data-dismiss="modal">Start New Submission</button></a>
+
+   </div>
+</div><!--jumbotron-->
+ 

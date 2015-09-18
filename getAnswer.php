@@ -1,0 +1,37 @@
+<?php
+# this file used to handle queries
+
+session_start();
+#include the db connection file
+include('includes/db.php');
+
+//echo "PWD = ".$_SESSION["flower"];
+	//echo "Connected successfully";   
+$result = mysql_query("SELECT * FROM answer WHERE stu_id=(SELECT student.stu_id FROM `student` INNER JOIN person WHERE person.id = student.stu_id and student.stu_id = '".$_SESSION['ID'] . "')");
+	/*$result = mysql_query("SELECT `student`.`stu_id`, `student`.`SID`, GROUP_CONCAT(`homework`.`hw_name`) as `homeworks` 
+FROM `student` 
+JOIN `student_homework` ON `student_homework`.`stu_id` = `student`.`stu_id` 
+JOIN `homework` ON `homework`.`hw_id` = `student_homework`.`hw_id`");*/
+
+	//create an array
+	$json_response = array();
+	
+	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		//printf ("%s (%s)\n",$row["stu_id"],$row["answer"]);
+	    $row_array['ans_id'] = $row['ans_id'];
+        $row_array['stu_id'] = $row['stu_id'];
+        $row_array['hw_id'] = $row['hw_id'];
+        $row_array['answer'] = $row['answer'];
+        $row_array['last_submit'] = $row['last_submit'];
+       
+
+        //push the values into the array
+        array_push($json_response, $row_array);
+	}
+
+	echo json_encode($json_response);
+
+	//close the db connection
+	mysql_close();
+
+?>

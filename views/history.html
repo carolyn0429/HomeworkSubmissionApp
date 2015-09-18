@@ -1,6 +1,6 @@
 <div class="jumbotron">
   <h2>Submission History</h2>
-      <br/> <br/>
+    <br/><br/>
     <div class="input-group col-lg-4">
         <input type="text" class="form-control" placeholder="Search..." id="search" name="search" ng-model="search">
           <div class="input-group-btn">
@@ -27,31 +27,13 @@
         <tbody>
           <tr ng-app="myapp" ng-controller="HistoryCtrl" ng-repeat="x in submissions track by $index | filter:search">
 
-            <td>{{ x.stuhw_id}} </td>
+            <td>{{ x.ans_id}} </td>
             <td>{{ x.stu_id }} </td>
             <td>{{ x.hw_id }} </td>
             <td>{{ x.answer }} </td>
             <td>{{ x.last_submit }} </td>
           </tr>
-          <!--<tr>
-            <td>2</td>
-            <td>ch0211</td>
-            <td>HW2</td>
-            <td>11:59pm PST 10/20/2015</td>       
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>ch0211</td>
-            <td>HW2</td>
-            <td>11:59pm PST 10/21/2015</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>ch451r</td>
-            <td>HW3</td>
-            <td>11:59pm PST 11/20/2015</td>
-           
-          </tr>-->
+          
         </tbody>
       </table>
     </div><!--table-->
