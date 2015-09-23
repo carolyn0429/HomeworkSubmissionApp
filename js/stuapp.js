@@ -31,7 +31,7 @@ angular.module('stuapp', ['ngRoute', 'ngResource'])
 			
 		}).
 		when('/submit',{
-			templateUrl: 'views/submithw.html',
+			templateUrl: 'views/submithw.php',
 			controller: 'SubmitCtrl'
 			
 		}).	
